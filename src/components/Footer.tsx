@@ -1,12 +1,9 @@
-import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { makeStyles } from '@material-ui/styles';
-import React from 'react';
+import { BottomNavigation, BottomNavigationAction } from '@mui/material'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
-
-const useStyles = makeStyles({
+const theme = {
     root: {
         '& .MuiBottomNavigationAction-root': {
             minWidth: 0,
@@ -21,25 +18,24 @@ const useStyles = makeStyles({
             }
         }
     }
-})
+}
 
 function Footer() {
-    const classes = useStyles()
     return (
-        <BottomNavigation width='auto' style={{ background: '#222' }}>
+        <BottomNavigation  style={{ background: '#222' , width: 'auto'}}>
             <BottomNavigationAction
-                className={classes.root}
+                sx={theme}
                 style={{ padding: 0 }}
                 icon={<LinkedInIcon />}
             />
             <BottomNavigationAction
-                className={classes.root}
+                sx={theme}
                 style={{ padding: 0 }}
                 icon={<GitHubIcon />}
             />
             <BottomNavigationAction
                 style={{ padding: 0 }}
-                className={classes.root}
+                sx={theme}
                 icon={<InstagramIcon />}
             />
         </BottomNavigation>

@@ -11,10 +11,10 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Route exact path='/' component={Home} />
-      <Route path='/resume' component={Resume} />
-      <Route path='/portfolio' component={Portfolio} />
-      <Route path='/contacts' component={Contacts} />
+      <Route path="/" element={<Home />} />
+      <Route path='/resume' element={<Resume />} />
+      <Route path='/portfolio'element={<Portfolio />} />
+      <Route path='/contacts' element={<Contacts />} />
     </>
   );
 }
